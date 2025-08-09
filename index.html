@@ -10,7 +10,7 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
-  background: url('https://i.ibb.co/fdBm2RgJ/Avery.png') no-repeat center center fixed;
+  background: url('https://i.ibb.co/LhgWVhCY/Avery-5.png') no-repeat center center fixed;
   background-size: cover;
   color: #f0f0f0;
   display: flex;
@@ -21,21 +21,26 @@ body {
   z-index: 0;
 }
 .form-container {
-  background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(50,50,60,0.9));
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  background-color: #ffffff; /* 白色背景 */
+  color: #000000;            /* 表單內文字改成黑色 */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   padding: 50px;
   max-width: 700px;
   margin: 40px auto;
 }
-
 input, select, textarea {
-  background-color: #2c2c2c;
-  border: 1px solid #555;
-  color: #eee;
+  background-color: #ffffff;  /* 白色底 */
+  color: #000000;             /* 黑色字 */
+  border: 1px solid #ccc;     /* 淺灰邊框 */
 }
-
+input.error, select.error, textarea.error {
+  border-color: #cc4444; /* 紅色錯誤框 */
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #555;    /* 聚焦時顯示灰色外框 */
+}
 button {
   background-color: #2f2f2f;
   color: #e0e0e0;
@@ -60,7 +65,7 @@ button:hover {
 }
 
 h1, h2, h3, label {
-  color: #f0f0f0;
+  color: #000000;  /* 全部標題與題目文字改黑色 */
 }
 h1 {
   text-align: center;
@@ -99,16 +104,8 @@ select {
   border-radius: 10px;
   font-size: 16px;
   font-family: 'Noto Serif TC', serif;
-  background-color: #2c2c2c;
-  color: #ffffff;
 }
 
-input:invalid {
-  border-color: #cc4444;
-}
-input:invalid:focus {
-  outline: 2px solid #cc4444;
-}
 
 button {
   margin-top: 40px;
@@ -128,20 +125,12 @@ button:hover {
 }
 
 .ig-link {
-  display: inline-block;
-  font-family: 'Noto Serif TC', serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #a0c4ff;
-  text-decoration: none;
-  border-bottom: 1px solid #a0c4ff;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-  letter-spacing: 0.3px;
+  color: #0000ee;
+  border-bottom: 1px solid #0000ee;
 }
 .ig-link:hover {
-  color: #8dbbf5;
-  border-bottom-color: #8dbbf5;
+  color: #551a8b;
+  border-bottom-color: #551a8b;
 }
 
 .info-block img {
@@ -208,7 +197,7 @@ button:hover {
 <body>
   <div class="form-container">
     <div class="logo-wrapper">
-  <img src="https://i.ibb.co/S4y5tgmY/2025-08-07-142926.jpg" alt="GINS Logo">
+  <img src="https://i.ibb.co/yFngs5Gx/5-E58326-B-EA3-A-43-FB-A1-B2-D1157-F438001-1.png" alt="GINS Logo">
 </div>
     <h1>GINS 金倪斯髮廊｜應徵表單</h1>
     <h2>很高興遇見你 ✨<br>我們正在尋找熱愛美感的你，一起打造舒服又質感的空間。<br>填完表單後，歡迎追蹤我們的 IG：<br><a href="https://www.instagram.com/gins_salon_/" target="_blank" class="ig-link">@gins_salon_</a></h2>
@@ -369,6 +358,16 @@ button:hover {
   </div>
 
   <script>
+function markErrors() {
+  const inputs = steps[currentStep].querySelectorAll('input[required], select[required], textarea[required]');
+  inputs.forEach(input => {
+    if (!input.checkValidity()) {
+      input.classList.add('error');
+    } else {
+      input.classList.remove('error');
+    }
+  });
+}
   const steps = document.querySelectorAll('.form-step');
   let currentStep = 0;
 
