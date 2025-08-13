@@ -257,8 +257,11 @@ button:hover {
 
         <label for="phone">Q6. 聯絡電話：</label>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="例如：0912345678">
+        
+        <label for="birthday">Q7. 生日：</label>
+        <input type="date" id="birthday" name="birthday" required>
 
-        <label for="email">Q7. E-mail：</label>
+        <label for="email"> Q8. E-mail：</label>
         <input type="email" id="email" name="email" required placeholder="example@email.com">
 
         <button type="button" onclick="nextStep()">下一步</button>
@@ -266,20 +269,20 @@ button:hover {
 
       <!-- 第3頁 -->
       <div class="form-step">
-        <label for="line">Q8. LINE ID（若無請填“無”）：</label>
+        <label for="line">Q9. LINE ID（若無請填“無”）：</label>
         <input type="text" id="line" name="line" required>
 
-        <label for="location">Q9. 目前所在縣市：</label>
+        <label for="location">Q10. 目前所在縣市：</label>
         <input type="text" id="location" name="location" required>
 
-        <label for="student">Q10. 是否還在讀書呢？</label>
+        <label for="student">Q11. 是否還在讀書呢？</label>
         <select id="student" name="student" required>
           <option value="">請選擇</option>
           <option>是</option>
           <option>否</option>
         </select>
 
-        <label for="finance">Q11. 目前是否有經濟壓力？</label>
+        <label for="finance">Q12. 目前是否有經濟壓力？</label>
         <select id="finance" name="finance" required>
           <option value="">請選擇</option>
           <option>是</option>
@@ -291,19 +294,19 @@ button:hover {
 
       <!-- 第4頁 -->
       <div class="form-step">
-        <label for="social">Q12. 目前經營的社群平台（IG帳號）</label>
+        <label for="social">Q13. 目前經營的社群平台（IG帳號）</label>
         <input type="text" id="social" name="social" required>
 
-        <label for="experience">Q13. 已入行多久：</label>
+        <label for="experience">Q14. 已入行多久：</label>
         <input type="text" id="experience" name="experience">
 
-        <label for="pastwork">Q14. 曾任職地點（前三間）：</label>
+        <label for="pastwork">Q15. 曾任職地點（前三間）：</label>
         <textarea id="pastwork" name="pastwork" rows="3"></textarea>
 
-        <label for="currentwork">Q15. 目前任職地點：</label>
+        <label for="currentwork">Q16. 目前任職地點：</label>
         <input type="text" id="currentwork" name="currentwork">
 
-        <label for="price">Q16. 目前剪髮價位：</label>
+        <label for="price">Q17. 目前剪髮價位：</label>
         <select id="price" name="price">
           <option value="">請選擇</option>
           <option>無</option>
@@ -312,7 +315,7 @@ button:hover {
           <option>700-1000</option>
         </select>
 
-        <label for="sales">Q17. 過往業績範圍：</label>
+        <label for="sales">Q18. 過往業績範圍：</label>
 <select id="sales" name="sales" required>
   <option value="">請選擇</option>
   <option>1萬以下</option>
@@ -323,10 +326,10 @@ button:hover {
   <option>20萬以上</option>
 </select>
 
-        <label for="reason">Q18. 為什麼想來應徵？</label>
+        <label for="reason">Q19. 為什麼想來應徵？</label>
         <textarea id="reason" name="reason" rows="3"></textarea>
 
-        <label for="source">Q19. 如何得知 GINS？</label>
+        <label for="source">Q20. 如何得知 GINS？</label>
         <select id="source" name="source">
           <option value="">請選擇</option>
           <option>IG廣告</option>
@@ -337,7 +340,7 @@ button:hover {
           <option>本來就是設計師Carol的粉絲</option>
         </select>
 
-        <label for="leave">Q20. 想離開原工作環境的原因：</label>
+        <label for="leave">Q21. 想離開原工作環境的原因：</label>
         <textarea id="leave" name="leave" rows="3"></textarea>
 
         <div class="checkbox-container">
