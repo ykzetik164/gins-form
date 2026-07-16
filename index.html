@@ -223,7 +223,7 @@ button:hover {
       <!-- 第1頁 -->
       <div class="form-step active">
         <label for="position">Q1. 想應徵什麼職位呢？</label>
-        <select id="position" name="position" required>
+        <select id="position" name="應徵職位" required>
           <option value="">請選擇</option>
           <option>設計師</option>
           <option>實習師</option>
@@ -250,10 +250,10 @@ button:hover {
         </div>
 
         <label for="name">Q2. 姓名：</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="姓名" required>
 
         <label for="nickname">Q3. 暱稱：</label>
-        <input type="text" id="nickname" name="nickname" required>
+        <input type="text" id="nickname" name="暱稱" required>
 
         <button type="button" onclick="nextStep()">下一步</button>
       </div>
@@ -261,7 +261,7 @@ button:hover {
       <!-- 第2頁 -->
       <div class="form-step">
         <label for="gender">Q4. 性別：</label>
-        <select id="gender" name="gender" required>
+        <select id="gender" name="性別" required>
           <option value="">請選擇</option>
           <option>生理男（心理女）</option>
           <option>生理男</option>
@@ -270,13 +270,13 @@ button:hover {
         </select>
 
         <label for="age">Q5. 年齡：</label>
-        <input type="number" id="age" name="age" min="15" max="60" required>
+        <input type="number" id="age" name="年齡" min="15" max="60" required>
 
         <label for="phone">Q6. 聯絡電話：</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="例如：0912345678">
+        <input type="tel" id="phone" name="聯絡電話" pattern="[0-9]{10}" required placeholder="例如：0912345678">
         
         <label for="birthday">Q7. 生日：</label>
-        <input type="date" id="birthday" name="birthday" required>
+        <input type="date" id="birthday" name="生日" required>
 
         <label for="email"> Q8. E-mail：</label>
         <input type="email" id="email" name="email" required placeholder="example@email.com">
@@ -287,20 +287,20 @@ button:hover {
       <!-- 第3頁 -->
       <div class="form-step">
         <label for="line">Q9. LINE ID（若無請填“無”）：</label>
-        <input type="text" id="line" name="line" required>
+        <input type="text" id="line" name="LINE ID" required>
 
         <label for="location">Q10. 目前所在縣市：</label>
-        <input type="text" id="location" name="location" required>
+        <input type="text" id="location" name="目前所在縣市" required>
 
         <label for="student">Q11. 是否還在讀書呢？</label>
-        <select id="student" name="student" required>
+        <select id="student" name="是否還在讀書" required>
           <option value="">請選擇</option>
           <option>是</option>
           <option>否</option>
         </select>
 
         <label for="finance">Q12. 目前是否有經濟壓力？</label>
-        <select id="finance" name="finance" required>
+        <select id="finance" name="是否有經濟壓力" required>
           <option value="">請選擇</option>
           <option>是</option>
           <option>否</option>
@@ -312,19 +312,19 @@ button:hover {
       <!-- 第4頁 -->
       <div class="form-step">
         <label for="social">Q13. 目前經營的社群平台（IG帳號）</label>
-        <input type="text" id="social" name="social" required>
+        <input type="text" id="social" name="經營社群平台(IG帳號)" required>
 
         <label for="experience">Q14. 已入行多久：</label>
-        <input type="text" id="experience" name="experience">
+        <input type="text" id="experience" name="已入行多久">
 
         <label for="pastwork">Q15. 曾任職地點（前三間）：</label>
-        <textarea id="pastwork" name="pastwork" rows="3"></textarea>
+        <textarea id="pastwork" name="曾任職地點(前三間)" rows="3"></textarea>
 
         <label for="currentwork">Q16. 目前任職地點：</label>
-        <input type="text" id="currentwork" name="currentwork">
+        <input type="text" id="currentwork" name="目前任職地點">
 
         <label for="price">Q17. 目前剪髮價位：</label>
-        <select id="price" name="price">
+        <select id="price" name="目前剪髮價位">
           <option value="">請選擇</option>
           <option>無</option>
           <option>300</option>
@@ -333,7 +333,7 @@ button:hover {
         </select>
 
         <label for="sales">Q18. 過往業績範圍：</label>
-<select id="sales" name="sales" required>
+<select id="sales" name="過往業績範圍" required>
   <option value="">請選擇</option>
   <option>1萬以下</option>
   <option>1萬-4萬</option>
@@ -344,10 +344,10 @@ button:hover {
 </select>
 
         <label for="reason">Q19. 為什麼想來應徵？</label>
-        <textarea id="reason" name="reason" rows="3"></textarea>
+        <textarea id="reason" name="為什麼想來應徵" rows="3"></textarea>
 
         <label for="source">Q20. 如何得知 GINS？</label>
-        <select id="source" name="source">
+        <select id="source" name="如何得知GINS">
           <option value="">請選擇</option>
           <option>IG廣告</option>
           <option>朋友推薦</option>
@@ -358,10 +358,10 @@ button:hover {
         </select>
 
         <label for="leave">Q21. 想離開原工作環境的原因：</label>
-        <textarea id="leave" name="leave" rows="3"></textarea>
+        <textarea id="leave" name="想離開原工作環境的原因" rows="3"></textarea>
 
         <div class="checkbox-container">
-  <input type="checkbox" id="final" name="final" required>
+  <input type="checkbox" id="final" name="確認資料正確" required>
   <label for="final"> 我已確認所有資料正確無誤</label>
 </div>
 
