@@ -213,7 +213,13 @@ button:hover {
     <h1>GINS 金倪斯髮廊｜應徵表單</h1>
     <h2>很高興遇見你 ✨<br>我們正在尋找熱愛美感的你，一起打造舒服又質感的空間。<br>填完表單後，歡迎追蹤我們的 IG：<br><a href="https://www.instagram.com/gins_salon_/" target="_blank" class="ig-link">@gins_salon_</a></h2>
 
-    <form id="multiStepForm" action="https://formspree.io/f/xrblogje" method="POST" onsubmit="handleSubmit(event)">
+    <form id="multiStepForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
+      <!-- Web3Forms 設定欄位 -->
+      <input type="hidden" name="access_key" value="7b8d133b-678a-46b4-aaad-812b670f8bda">
+      <input type="hidden" name="subject" value="GINS 應徵表單 - 新的應徵通知">
+      <input type="hidden" name="from_name" value="GINS 應徵表單">
+      <input type="checkbox" name="botcheck" style="display:none">
+
       <!-- 第1頁 -->
       <div class="form-step active">
         <label for="position">Q1. 想應徵什麼職位呢？</label>
